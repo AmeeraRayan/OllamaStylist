@@ -3,7 +3,7 @@ Description=Flask UI Service
 After=network.target
 
 [Service]
-ExecStart=/home/ubuntu/venv/bin/python3 /home/ubuntu/OllamaStylist/app.py
+ExecStart=/home/ubuntu/OllamaStylist/venv/bin/python3 /home/ubuntu/OllamaStylist/app.py
 WorkingDirectory=/home/ubuntu/OllamaStylist
 User=ubuntu
 Group=ubuntu
