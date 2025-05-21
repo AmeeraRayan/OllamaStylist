@@ -3,7 +3,7 @@ Description=Flask UI Service
 After=network.target
 
 [Service]
-ExecStart=/home/ubuntu/venv/bin/python3 app.py
+ExecStart=/home/ubuntu/venv/bin/python3 /home/ubuntu/OllamaStylist/app.py
 WorkingDirectory=/home/ubuntu/OllamaStylist
 User=ubuntu
 Group=ubuntu
@@ -12,4 +12,4 @@ RestartSec=3
 Environment=PATH=/home/ubuntu/venv/bin:/usr/bin:/bin
 
 [Install]
-WantedBy=multi-user.target 
+WantedBy=multi-user.target
