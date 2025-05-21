@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 ExecStart=/home/ubuntu/venv/bin/python3 app.py
-WorkingDirectory=/home/ubuntu
+WorkingDirectory=/home/ubuntu/OllamaStylist
 User=ubuntu
 Group=ubuntu
 Restart=always
