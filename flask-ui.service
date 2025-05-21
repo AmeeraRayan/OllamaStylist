@@ -1,0 +1,15 @@
+[Unit]
+Description=Flask UI Service
+After=network.target
+
+[Service]
+ExecStart=/home/ubuntu/venv/bin/python3 app.py
+WorkingDirectory=/home/ubuntu
+User=ubuntu
+Group=ubuntu
+Restart=always
+RestartSec=3
+Environment=PATH=/home/ubuntu/venv/bin:/usr/bin:/bin
+
+[Install]
+WantedBy=multi-user.target 
