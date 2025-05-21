@@ -3,6 +3,8 @@ import requests
 import re
 import os
 import time
+from dotenv import load_dotenv
+load_dotenv()
 app = Flask(__name__)
 
 # AI Server private IP
@@ -61,7 +63,9 @@ HTML_TEMPLATE = '''
                     <p class="selected-text left-align">{{ selected_option }}</p>
                     <h3 class="left-title">Here's how it might look:</h3>
                     <div class="image-container">
+                        {% if image_filename %}
                         <img src="{{ url_for('static', filename=image_filename) }}" class="fashion-image">
+                        {% endif %}                  
                     </div>
                 </div>
             {% endif %}
