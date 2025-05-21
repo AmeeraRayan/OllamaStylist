@@ -75,7 +75,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Update the selected outfit display
             outfitDescription.textContent = option;
-            outfitImage.src = `${FLASK_BACKEND}/static/result.png?t=${new Date().getTime()}`; // Add timestamp to prevent caching
+            const imageTag = document.getElementById('outfitImage');
+            const imageFilename = document.getElementById('imageFilename')?.value;
+            outfitImage.src = `${FLASK_BACKEND}/static/${imageFilename}?t=${new Date().getTime()}`; // Add timestamp to prevent caching
             selectedOutfit.classList.remove('hidden');
         } catch (error) {
             console.error('Error:', error);

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Stylist</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Fashion Stylist</h1>
+        
+        <div class="input-section">
+            <h2>What should I wear for...</h2>
+            <form id="outfitForm">
+                <input type="text" id="occasion" placeholder="e.g. a romantic dinner" required>
+                <button type="submit">Get Outfit Suggestions</button>
+            </form>
+        </div>
+
+        <div id="optionsSection" class="options-section hidden">
+            <h3>Choose an outfit:</h3>
+            <div id="outfitOptions" class="outfit-options"></div>
+        </div>
+
+        <div id="selectedOutfit" class="selected-outfit hidden">
+            <h3>Your Selected Outfit:</h3>
+            <p id="outfitDescription"></p>
+            <div class="image-container">
+                <img id="outfitImage" src="" alt="Generated outfit">
+            </div>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
