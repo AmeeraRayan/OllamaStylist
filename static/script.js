@@ -7,7 +7,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const outfitImage = document.getElementById('outfitImage');
 
     // Replace this with your Flask backend URL
-    const FLASK_BACKEND = 'http://localhost:5000';
+    let FLASK_BACKEND = '';
+    if (window.location.hostname === 'localhost' || window.location.hostname == '127.0.0.1')
+        {
+            const FLASK_BACKEND = 'http://localhost:5000';
+        }
+    else {
+        const FLASK_BACKEND = 'http://16.171.29.68:5000';
+    }
 
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
