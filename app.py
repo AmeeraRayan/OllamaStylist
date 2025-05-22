@@ -4,14 +4,16 @@ import re
 import os
 import time
 from dotenv import load_dotenv
-load_dotenv()
+from pathlib import Path
+load_dotenv(dotenv_path=Path('.')/'.env')
 app = Flask(__name__)
 
 # AI Server private IP
-AI_SERVER = "http://13.50.5.175:8000/generate"
+AI_SERVER = "http://51.20.141.180:8000/generate"
 print(AI_SERVER)
 HUGGINGFACE_URL = "https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-xl-base-1.0"
 HUGGINGFACE_TOKEN = os.getenv("HUGGINGFACE_TOKEN")
+print("Token loaded:", HUGGINGFACE_TOKEN)
 
 HEADERS = {
     "Authorization": f"Bearer {HUGGINGFACE_TOKEN}",
