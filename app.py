@@ -96,12 +96,12 @@ def home():
             question = request.form['question']
             try:
                 response = requests.post(AI_SERVER, json={
-                    "prompt": f"""You are a fashion stylist. Given the event: '{question}', respond with only 3 complete outfit ideas, in the following numbered format:
+                    "prompt": f"""So , You are a fashion stylist. Given the event: '{question}', respond with only 3 complete outfit ideas for a girls, in the following numbered format:
                     1.
                     2.
                     3.
-                    No introduction, no explanation, only the outfits."""
-                }, timeout=60)
+                    Each outfit must be clearly,Please make sure the suggestions are stylish"""
+                }, timeout=80)
                 raw_text = response.json().get('response', '')
                 matches = re.findall(r"\d+\.\s*(.*?)(?=\d+\.\s|$)", raw_text, re.DOTALL)
                 if len(matches) < 3:
