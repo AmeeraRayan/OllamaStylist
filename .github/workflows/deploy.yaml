@@ -39,7 +39,7 @@ jobs:
         run: |
           ssh ec2 "if [ -d ~/${REPO_NAME} ]; then cd ~/${REPO_NAME} && git pull; else git clone --branch main ${REPO_URL} ~/${REPO_NAME}; fi"
           scp deploy.sh flask-ui.service ec2:~/${REPO_NAME}/
-          ssh ec2 "cd ~/${REPO_NAME} && echo ${{secrets.HUGGINGFACE_TOKEN}} > .env"
+          ssh ec2 "cd ~/${REPO_NAME} && echo HUGGINGFACE_TOKEN=${{secrets.HUGGINGFACE_TOKEN}} > .env"
 
       - name: Execute script on EC2
         run: |
