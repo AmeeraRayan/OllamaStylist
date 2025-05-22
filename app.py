@@ -5,7 +5,11 @@ import os
 import time
 from dotenv import load_dotenv
 from pathlib import Path
-load_dotenv(dotenv_path=Path('.')/'.env')
+if Path('.env').exists():
+    load_dotenv(dotenv_path=Path('.')/'.env')
+else:
+    load_dotenv(dotenv_path=Path('/home/ubuntu/OllamaStylist/.env'))
+
 app = Flask(__name__)
 
 # AI Server private IP
