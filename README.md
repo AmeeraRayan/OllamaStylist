@@ -69,7 +69,15 @@ Here are some screenshots of the app in action:
 - GitHub Actions automates deployment on push to main.
 
 ### Architecture Diagram
-![Architecture](screenshots/fashion_architecture_diagram.png)
+
+The following diagrams illustrate the flow and roles of each component in the OllamaStylist system:
+
+[**Architecture**](./Architecture)
+
+- ![Architecture Diagram 1](./Architecture/diagram1.png)
+- ![Architecture Diagram 2](./Architecture/diagram2.png)
+
+> Place your architecture images as 'diagram1.png' and 'diagram2.png' in the Architecture folder. Clicking the 'Architecture' link above will show both images together for easy reference.
 
 ---
 
