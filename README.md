@@ -74,10 +74,7 @@ The following diagrams illustrate the flow and roles of each component in the Ol
 
 [**Architecture**](./Architecture)
 
-- ![Architecture Diagram 1](./Architecture/diagram1.png)
-- ![Architecture Diagram 2](./Architecture/diagram2.png)
-
-> Place your architecture images as 'diagram1.png' and 'diagram2.png' in the Architecture folder. Clicking the 'Architecture' link above will show both images together for easy reference.
+> Click the link above to view the detailed architecture diagrams in the Architecture folder.
 
 ---
 
