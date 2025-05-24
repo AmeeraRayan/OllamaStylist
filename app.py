@@ -13,7 +13,7 @@ else:
 app = Flask(__name__)
 
 # AI Server private IP
-AI_SERVER = "http://51.20.132.203:8000/generate"
+AI_SERVER = "http://51.20.60.96:8000/generate"
 print(AI_SERVER)
 HUGGINGFACE_URL = "https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-xl-base-1.0"
 HUGGINGFACE_TOKEN = os.getenv("HUGGINGFACE_TOKEN")
@@ -105,7 +105,7 @@ def home():
                 raw_text = response.json().get('response', '')
                 matches = re.findall(r"\d+\.\s*(.*?)(?=\d+\.\s|$)", raw_text, re.DOTALL)
                 if len(matches) < 3:
-                   return {"error": "Failed to extract 3 outfits from the model. Try again or adjust the prompt."}
+                   return {"error": "Failed to extract 3 outfits from the model. Tryyy again or adjust the prompt."}
                 options = [match.strip().replace("Format #", "").split("Option")[0].strip() for match in matches]
                 if not options:
                     options = ["Sorry, no outfit suggestions were found."]
