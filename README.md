@@ -225,8 +225,8 @@ After pushing your changes:
 2. You should see a prompt to "Compare & pull request" for your new branch
 3. Click that to create a pull request
 4. This will:
-   - Let you review your changes
-   - Run any automated tests
+   - Let you review your changes .
+   - Run any automated tests . 
    - Allow you to merge to main if everything looks good
 
 ### After Merging
