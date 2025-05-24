@@ -66,7 +66,7 @@ Here are some screenshots of the app in action:
 - EC2 UI Server (10.0.0.0/24) runs Flask and serves the frontend via flask-ui.service.
 - EC2 AI Server (10.0.1.0/24) runs both FastAPI and Ollama, communicates locally.
 - A VPC with public subnets for both EC2 instances ensures accessibility and separation.
-- GitHub Actions automates deployment on push to main.
+- GitHub Actions automates deployment on push to main.!
 
 ### Architecture Diagram
 
@@ -192,6 +192,76 @@ We use a paid Hugging Face token, managed via GitHub secrets and loaded into a .
 
 ---
 
+## Development Workflow
+
+### Working with Git Branches
+
+1. **Create and switch to a new feature branch:**
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+
+2. **Make your changes to the files**
+
+3. **Add your changes:**
+   ```bash
+   git add .
+   ```
+
+4. **Commit your changes:**
+   ```bash
+   git commit -m "Your commit message describing the changes"
+   ```
+
+5. **Push the new branch to GitHub:**
+   ```bash
+   git push -u origin feature/your-feature-name
+   ```
+
+### Creating a Pull Request
+
+After pushing your changes:
+1. Go to your GitHub repository in your browser
+2. You should see a prompt to "Compare & pull request" for your new branch
+3. Click that to create a pull request
+4. This will:
+   - Let you review your changes
+   - Run any automated tests
+   - Allow you to merge to main if everything looks good
+
+### After Merging
+
+1. **Switch back to main branch:**
+   ```bash
+   git checkout main
+   ```
+
+2. **Update your local main branch:**
+   ```bash
+   git pull origin main
+   ```
+   This will:
+   - Switch you back to the main branch
+   - Update your local main branch with the latest changes (including your merged feature)
+
+### Cleaning Up
+
+When you're done with a feature branch, you can delete it:
+
+1. **Delete the local branch:**
+   ```bash
+   git branch -d feature/your-feature-name
+   ```
+
+2. **Delete the remote branch:**
+   ```bash
+   git push origin --delete feature/your-feature-name
+   ```
+
+Note: Use `-D` instead of `-d` if you want to force delete an unmerged branch.
+
+---
+
 ## Running Locally (Development)
 
 ```bash
@@ -266,4 +336,4 @@ This project was created by Ameera Rayan as part of a mid-course project in AI-p
 
 GitHub: [github.com/AmeeraRayan](https://github.com/AmeeraRayan)
 
-LinkedIn: [Ameera Rayan](https://www.linkedin.com/in/ameera-rayan-a80349268?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app) 
+LinkedIn: [Ameera Rayan](https://www.linkedin.com/in/ameera-rayan-a80349268?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app)
