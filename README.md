@@ -199,6 +199,8 @@ We use a paid Hugging Face token, managed via GitHub secrets and loaded into a .
 1. **Create and switch to a new feature branch:**
    ```bash
    git checkout -b feature/your-feature-name
+   " example"  
+   git checkout -b test 
    ```
 
 2. **Make your changes to the files**
@@ -206,6 +208,8 @@ We use a paid Hugging Face token, managed via GitHub secrets and loaded into a .
 3. **Add your changes:**
    ```bash
    git add .
+    " example" 
+    git add app.py README.md 
    ```
 
 4. **Commit your changes:**
@@ -216,6 +220,8 @@ We use a paid Hugging Face token, managed via GitHub secrets and loaded into a .
 5. **Push the new branch to GitHub:**
    ```bash
    git push -u origin feature/your-feature-name
+   " example" 
+   git push -u origin test
    ```
 
 ### Creating a Pull Request
@@ -246,7 +252,7 @@ After pushing your changes:
 
 ### Cleaning Up
 
-When you're done with a feature branch, you can delete it:
+When you're done with a feature branch ,you can delete it:
 
 1. **Delete the local branch:**
    ```bash
