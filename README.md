@@ -196,7 +196,7 @@ We use a paid Hugging Face token, managed via GitHub secrets and loaded into a .
 
 ### Working with Git Branches
 
-1. **Create and switch to a new feature branch:**
+1. **Create and switch to a new feature branch:::**
    ```bash
    git checkout -b feature/your-feature-name
    " example"  
