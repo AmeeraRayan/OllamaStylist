@@ -42,7 +42,7 @@ HTML_TEMPLATE = '''
         </div>
         <div class="center-box">
             <div class="title-row">
-                <h1 class="main-title"> 🚀 What should I wear for...</h1>
+                <h1 class="main-title">What should I wear for...</h1>
                 <span class="icon-clothes"><i class="fa-solid fa-shirt"></i></span>
             </div>
             <form method="post" class="question-form">
