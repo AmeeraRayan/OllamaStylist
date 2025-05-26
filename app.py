@@ -13,7 +13,7 @@ else:
 app = Flask(__name__)
 
 # AI Server private IP
-AI_SERVER = "http://13.48.133.233:8000/generate"
+AI_SERVER = "http://13.60.212.228:8000/generate"
 print(AI_SERVER)
 HUGGINGFACE_URL = "https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-xl-base-1.0"
 HUGGINGFACE_TOKEN = os.getenv("HUGGINGFACE_TOKEN")
